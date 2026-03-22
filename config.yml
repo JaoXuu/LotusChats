@@ -1,1 +1,51 @@
+storage:
+  # Storage backend to use. Available options: YAML, JSON, SQLITE
+  type: YAML
 
+chatcolor:
+  # Default color applied to players with no color selected.
+  # Accepts any color key from chatcolor.yml (basic, custom or hex), or a direct code like &7 or #RRGGBB.
+  default-color: 'gray'
+  # Default format code applied to players with no format selected. Leave empty to disable.
+  default-format: ''
+
+messaging:
+  enabled: true
+  format:
+    # %receiver% = recipient's name, %message% = message content
+    sender: '&8[&7You &8→ &7%receiver%&8] &f%message%'
+    # %sender% = sender's name
+    receiver: '&8[&7%sender% &8→ &7You&8] &f%message%'
+    # Shown to players with lotuschat.spy permission
+    spy: '&8[SPY] &7%sender% &8→ &7%receiver%&8: &f%message%'
+  sound:
+    enabled: true
+    name: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
+  social-spy:
+    enabled: true
+
+mentions:
+  enabled: true
+  # Color applied to the @PlayerName mention in chat
+  highlight-color: '&e'
+
+  chat:
+    enabled: true
+    # %sender% = player who mentioned, %target% = player who was mentioned
+    message: '&e%sender% mentioned you in chat.'
+
+  title:
+    enabled: false
+    title: '&e⚡ Mention!'
+    subtitle: '&7%sender% mentioned you'
+    fade-in: 10
+    stay: 70
+    fade-out: 20
+
+  sound:
+    enabled: true
+    name: ENTITY_EXPERIENCE_ORB_PICKUP
+    volume: 1.0
+    pitch: 1.0
