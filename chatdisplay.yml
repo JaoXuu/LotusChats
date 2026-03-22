@@ -1,1 +1,99 @@
+settings:
+  enabled: true
 
+# ── Item display: shows the held item with its native hover tooltip ────────────
+# Note: native hover may not render correctly on 1.20.5+. Use item-menu-display instead.
+item-display:
+  enabled: true
+  triggers:
+    - '[i]'
+  cooldown: 30
+  format: '&7[&f%item%&7%amount%]'
+  amount-format: ' &7x&f%amount%'
+  permission: 'lotuschat.display.item'
+
+# ── Item menu display: shows a clickable chat link that opens an item preview menu ──
+item-menu-display:
+  enabled: true
+  triggers:
+    - '[item]'
+  cooldown: 30
+  expire-seconds: 300
+  format: '&7[&f%item%&7]'
+  hover:
+    - '&7Click to view'
+    - '&f%player%&7''s item'
+  permission: 'lotuschat.display.itemmenu'
+  menu:
+    title: '&8%player%&7''s Item'
+    filler:
+      material: 'GRAY_STAINED_GLASS_PANE'
+      name: ' '
+
+# ── Inventory display: shows a clickable chat link that opens a player's inventory ──
+inventory-display:
+  enabled: true
+  triggers:
+    - '[inv]'
+    - '[inventory]'
+  cooldown: 30
+  expire-seconds: 300
+  format: '&a[&f%player%&a''s Inventory]'
+  hover:
+    - '&7Click to view'
+    - '&f%player%&7''s inventory'
+  permission: 'lotuschat.display.inventory'
+  menu:
+    title: '&8%player%&7''s Inventory'
+    filler:
+      material: 'GRAY_STAINED_GLASS_PANE'
+      name: ' '
+
+# ── Ender chest display: shows a clickable chat link that opens a player's ender chest ──
+enderchest-display:
+  enabled: true
+  triggers:
+    - '[ec]'
+    - '[enderchest]'
+  cooldown: 30
+  expire-seconds: 300
+  format: '&5[&f%player%&5''s Ender Chest]'
+  hover:
+    - '&7Click to view'
+    - '&f%player%&7''s ender chest'
+  permission: 'lotuschat.display.enderchest'
+  menu:
+    title: '&8%player%&7''s Ender Chest'
+
+# ── Custom displays: define your own triggers with hover text and PlaceholderAPI support ──
+custom-displays:
+  stats:
+    enabled: true
+    triggers:
+      - '[stats]'
+    cooldown: 20
+    format: '&c[&f%player%&c''s Stats]'
+    hover:
+      - ''
+      - '&7➛ &c%player%'
+      - ''
+      - '&8▪ &7Kills: &c%statistic_player_kills%'
+      - '&8▪ &7Deaths: &c%statistic_deaths%'
+      - '&8▪ &7Level: &a%player_level%'
+      - '&8▪ &7XP: &a%player_exp%'
+      - '&8▪ &7Health: &a%player_health%&8/&a%player_max_health%'
+      - ''
+    permission: 'lotuschat.display.stats'
+
+  ping:
+    enabled: true
+    triggers:
+      - '[ping]'
+    cooldown: 10
+    format: '&b[&f%player%&b''s Ping]'
+    hover:
+      - ''
+      - '&f%player%&7''s ping'
+      - '&7is &b%player_ping%ms'
+      - ''
+    permission: 'lotuschat.display.ping'
