@@ -1,1 +1,63 @@
+prefix: '&8[&bLotusChat&8] &r'
 
+general:
+  no-permission: '%prefix%&cYou do not have permission to do that.'
+  player-only: '%prefix%&cThis command can only be used by players.'
+  player-not-found: '%prefix%&cPlayer &f%player% &cwas not found or is offline.'
+  reload-success: '%prefix%&aPlugin reloaded successfully.'
+  cooldown: '%prefix%&cPlease wait &f%seconds%s &cbefore using that again.'
+
+chatcolor:
+  color-set: '%prefix%&aChat color set to &r%color%&a.'
+  color-set-other: '%prefix%&aChat color of &f%player% &aset to &r%color%&a.'
+  color-cleared: '%prefix%&aChat color has been removed.'
+  no-hex-support: '%prefix%&cHex colors are only available on 1.16 and above.'
+
+  # ── Solid hex color input ─────────────────────────────────────────────────
+  hex-prompt: '&bType your hex color in chat &7(e.g. &f#FF5733&7 or &fFF5733&7). Type &ccancel &7to abort:'
+  hex-invalid: '&cInvalid hex color. Use the format &f#RRGGBB &cor &fRRGGBB&c. Try again or type &fcancel&c.'
+  hex-cancelled: '%prefix%&7Hex color selection cancelled.'
+
+  # ── Hex gradient input ────────────────────────────────────────────────────
+  hex-gradient-prompt-1: '&bType the &lfirst &r&bhex color for the gradient &7(e.g. &f#54DAF4&7). Type &ccancel &7to abort:'
+  hex-gradient-prompt-2: '&bType the &lsecond &r&bhex color for the gradient &7(e.g. &f#545EB6&7). Type &ccancel &7to abort:'
+  hex-gradient-cancelled: '%prefix%&7Gradient color selection cancelled.'
+
+messaging:
+  no-reply-target: '%prefix%&cYou have no one to reply to.'
+  player-toggled-off: '%prefix%&c%player% has private messages disabled.'
+  messages-toggled-on: '%prefix%&aPrivate messages enabled.'
+  messages-toggled-off: '%prefix%&cPrivate messages disabled.'
+  ignore-added: '%prefix%&aYou are now ignoring &f%player%&a.'
+  ignore-removed: '%prefix%&aYou are no longer ignoring &f%player%&a.'
+  player-ignoring-you: '%prefix%&c%player% is ignoring you.'
+  usage-msg: '%prefix%&cUsage: /msg <player> <message>'
+  usage-r: '%prefix%&cUsage: /r <message>'
+  usage-ignore: '%prefix%&cUsage: /msgignore <player>'
+
+chatdisplay:
+  no-item: '%prefix%&cYou are not holding any item.'
+  inventory-expired: '%prefix%&cThis inventory preview has expired.'
+  enderchest-expired: '%prefix%&cThis ender chest preview has expired.'
+  item-expired: '%prefix%&cThis item preview has expired.'
+  multiple-triggers: '%prefix%&7Only one display trigger is allowed per message. The first one was processed.'
+
+chatchannel:
+  entered: '%prefix%&aYou joined the &f%channel% &achannel.'
+  left: '%prefix%&7You left the &f%channel% &7channel.'
+
+chatfilter:
+  blocked-url: '%prefix%&cSending links or IP addresses in chat is not allowed.'
+
+help:
+  header: '&8&m----&r &bLotusChat &8| &7Help &8&m----'
+  footer: '&8&m-----------------------------'
+  lines:
+    - '&b/lc reload &8- &7Reloads the plugin'
+    - '&b/lc help &8- &7Shows this help message'
+    - '&b/chatcolor &8- &7Opens the color selection menu'
+    - '&b/chatcolor set <player> <color> &8- &7Sets a player''s chat color'
+    - '&b/msg <player> <message> &8- &7Sends a private message'
+    - '&b/r <message> &8- &7Replies to the last private message'
+    - '&b/msgignore <player> &8- &7Toggle ignoring a player''s messages'
+    - '&b/msgtoggle &8- &7Toggle receiving private messages'
