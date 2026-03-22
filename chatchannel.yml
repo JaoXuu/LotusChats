@@ -1,1 +1,23 @@
+settings:
+  enabled: false
 
+# Each channel requires a unique key. Players can enter/leave a channel
+# using its command, and all messages typed while inside will be routed there.
+channels:
+  premium:
+    priority: 0
+    permission: 'lotuschat.chatchannel.premium'
+    format: '&6[Premium Chat] &e%player_name% &8» &f%message%'
+    hover:
+      enabled: true
+      lines:
+        - ''
+        - '&eThis chat is exclusive to'
+        - '&epremium players.'
+        - '&7Use &6/chatpremium &7to talk here'
+        - ''
+    click:
+      format_click_command: '/chatpremium'
+    commands:
+      - '/chatpremium'
+      - '/cp'
