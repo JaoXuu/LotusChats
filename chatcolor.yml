@@ -1,1 +1,457 @@
+menu:
+  title: '&8» &bChatColor &8«'
+  size: 54
 
+  colors:
+    black:
+      slot: 10
+      code: '&0'
+      material: BLACK_WOOL
+      name: '&0Black'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_blue:
+      slot: 11
+      code: '&1'
+      material: BLUE_WOOL
+      name: '&1Dark Blue'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_green:
+      slot: 12
+      code: '&2'
+      material: GREEN_WOOL
+      name: '&2Dark Green'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_aqua:
+      slot: 13
+      code: '&3'
+      material: CYAN_WOOL
+      name: '&3Dark Aqua'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_red:
+      slot: 14
+      code: '&4'
+      material: RED_WOOL
+      name: '&4Dark Red'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_purple:
+      slot: 15
+      code: '&5'
+      material: PURPLE_WOOL
+      name: '&5Dark Purple'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    gold:
+      slot: 16
+      code: '&6'
+      material: ORANGE_WOOL
+      name: '&6Gold'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    gray:
+      slot: 19
+      code: '&7'
+      material: LIGHT_GRAY_WOOL
+      name: '&7Gray'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    dark_gray:
+      slot: 20
+      code: '&8'
+      material: GRAY_WOOL
+      name: '&8Dark Gray'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    blue:
+      slot: 21
+      code: '&9'
+      material: BLUE_WOOL
+      name: '&9Blue'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    green:
+      slot: 22
+      code: '&a'
+      material: LIME_WOOL
+      name: '&aGreen'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    aqua:
+      slot: 23
+      code: '&b'
+      material: LIGHT_BLUE_WOOL
+      name: '&bAqua'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    red:
+      slot: 24
+      code: '&c'
+      material: RED_WOOL
+      name: '&cRed'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    light_purple:
+      slot: 25
+      code: '&d'
+      material: PINK_WOOL
+      name: '&dLight Purple'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    yellow:
+      slot: 28
+      code: '&e'
+      material: YELLOW_WOOL
+      name: '&eYellow'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+    white:
+      slot: 29
+      code: '&f'
+      material: WHITE_WOOL
+      name: '&fWhite'
+      lore:
+        - ''
+        - '&7Click to select'
+        - ''
+
+  formats:
+    bold:
+      slot: 31
+      code: '&l'
+      material-inactive: GRAY_DYE
+      material-active: LIME_DYE
+      name: '&f&lBold'
+      lore:
+        - ''
+        - '&7Click to toggle'
+        - ''
+    italic:
+      slot: 32
+      code: '&o'
+      material-inactive: GRAY_DYE
+      material-active: LIME_DYE
+      name: '&o&fItalic'
+      lore:
+        - ''
+        - '&7Click to toggle'
+        - ''
+    strikethrough:
+      slot: 33
+      code: '&m'
+      material-inactive: GRAY_DYE
+      material-active: LIME_DYE
+      name: '&m&fStrikethrough'
+      lore:
+        - ''
+        - '&7Click to toggle'
+        - ''
+    underline:
+      slot: 34
+      code: '&n'
+      material-inactive: GRAY_DYE
+      material-active: LIME_DYE
+      name: '&n&fUnderline'
+      lore:
+        - ''
+        - '&7Click to toggle'
+        - ''
+
+  navigation:
+    custom-color:
+      slot: 48
+      material: NETHER_STAR
+      name: '&d&lCustom Colors'
+      lore:
+        - ''
+        - '&7Custom patterns such as'
+        - '&7rainbow, gradients and more'
+        - ''
+        - '&dClick to open'
+        - ''
+    hex-color:
+      slot: 50
+      material: BEACON
+      name: '&b&lHex Colors'
+      lore:
+        - ''
+        - '&71.16+ only'
+        - ''
+        - '&bClick to open'
+        - ''
+    close:
+      slot: 49
+      material: BARRIER
+      name: '&cClose'
+      lore: []
+    remove-color:
+      slot: 45
+      material: BUCKET
+      name: '&7Reset Color'
+      lore:
+        - ''
+        - '&7Resets to the default color'
+        - '&7set in config.yml'
+        - ''
+
+# ── Custom Colors ─────────────────────────────────────────────────────────────
+custom-color-menu:
+  title: '&8» &dCustom Colors &8«'
+  size: 54
+  colors:
+    rainbow:
+      slot: 10
+      material: MAGMA_CREAM
+      name: '&c&lR&6&la&e&li&a&ln&b&lb&9&lo&5&lw'
+      lore:
+        - ''
+        - '&7Each letter cycles through colors'
+        - ''
+        - '&dClick to select'
+        - ''
+      pattern: ['&c','&6','&e','&a','&b','&9','&5','&d']
+    gradient_red_yellow:
+      slot: 11
+      material: BLAZE_POWDER
+      name: '&c&lR&6&le&6&ld&6&l-&6&lY&6&le&6&ll'
+      lore:
+        - ''
+        - '&7Red to yellow gradient'
+        - ''
+        - '&dClick to select'
+        - ''
+      pattern: ['&c','&c','&6','&6','&e','&e']
+    gradient_blue_aqua:
+      slot: 12
+      material: PRISMARINE_CRYSTALS
+      name: '&9&lB&b&ll&9&lu&b&le&9&l-&b&lA&9&lq&b&lu&9&la'
+      lore:
+        - ''
+        - '&7Blue to aqua gradient'
+        - ''
+        - '&dClick to select'
+        - ''
+      pattern: ['&9','&9','&b','&b','&3','&3']
+    gradient_green:
+      slot: 13
+      material: SLIME_BALL
+      name: '&2&lG&a&lr&2&le&a&le&2&ln'
+      lore:
+        - ''
+        - '&7Green gradient'
+        - ''
+        - '&dClick to select'
+        - ''
+      pattern: ['&2','&a','&2','&a']
+    pink_purple:
+      slot: 14
+      material: PINK_DYE
+      name: '&d&lP&5&li&d&ln&5&lk'
+      lore:
+        - ''
+        - '&7Pink and purple'
+        - ''
+        - '&dClick to select'
+        - ''
+      pattern: ['&d','&5','&d','&5']
+
+  navigation:
+    back:
+      slot: 49
+      material: ARROW
+      name: '&7Go Back'
+      lore: []
+
+# ── Hex Colors ────────────────────────────────────────────────────────────────
+hex-color-menu:
+  title: '&8» &bHex Colors &8«'
+  size: 54
+
+  colors:
+    sky_blue:
+      slot: 10
+      material: LIGHT_BLUE_WOOL
+      type: solid
+      hex: '#54DAF4'
+      name: '&#54DAF4Sky Blue'
+      lore:
+        - ''
+        - '&7Solid hex color'
+        - '&#54DAF4#54DAF4'
+        - ''
+        - '&bClick to select'
+        - ''
+    deep_purple:
+      slot: 11
+      material: PURPLE_WOOL
+      type: solid
+      hex: '#7B2FBE'
+      name: '&#7B2FBEDeep Purple'
+      lore:
+        - ''
+        - '&7Solid hex color'
+        - '&#7B2FBE#7B2FBE'
+        - ''
+        - '&bClick to select'
+        - ''
+    coral:
+      slot: 12
+      material: RED_WOOL
+      type: solid
+      hex: '#FF6B6B'
+      name: '&#FF6B6BCoral'
+      lore:
+        - ''
+        - '&7Solid hex color'
+        - '&#FF6B6B#FF6B6B'
+        - ''
+        - '&bClick to select'
+        - ''
+    mint:
+      slot: 13
+      material: LIME_WOOL
+      type: solid
+      hex: '#A8FFD8'
+      name: '&#A8FFD8Mint'
+      lore:
+        - ''
+        - '&7Solid hex color'
+        - '&#A8FFD8#A8FFD8'
+        - ''
+        - '&bClick to select'
+        - ''
+    gold_hex:
+      slot: 14
+      material: GOLD_INGOT
+      type: solid
+      hex: '#FFD700'
+      name: '&#FFD700Gold'
+      lore:
+        - ''
+        - '&7Solid hex color'
+        - '&#FFD700#FFD700'
+        - ''
+        - '&bClick to select'
+        - ''
+    ocean_gradient:
+      slot: 19
+      material: PRISMARINE_CRYSTALS
+      type: gradient
+      hex-from: '#54DAF4'
+      hex-to: '#545EB6'
+      name: '&#54DAF4O&#5198D5c&#4E72B7e&#4B4C98a&#545EB6n'
+      lore:
+        - ''
+        - '&7Hex gradient'
+        - '&#54DAF4#54DAF4 &8→ &#545EB6#545EB6'
+        - ''
+        - '&bClick to select'
+        - ''
+    sunset_gradient:
+      slot: 20
+      material: BLAZE_POWDER
+      type: gradient
+      hex-from: '#FF6B6B'
+      hex-to: '#FFD700'
+      name: '&#FF6B6BS&#FF8556u&#FFA341n&#FFBE2Cs&#FFD700et'
+      lore:
+        - ''
+        - '&7Hex gradient'
+        - '&#FF6B6B#FF6B6B &8→ &#FFD700#FFD700'
+        - ''
+        - '&bClick to select'
+        - ''
+    forest_gradient:
+      slot: 21
+      material: SLIME_BALL
+      type: gradient
+      hex-from: '#2ECC71'
+      hex-to: '#1A5C33'
+      name: '&#2ECC71F&#27B862o&#208E53r&#1A7443e&#1A5C33s&#1A5C33t'
+      lore:
+        - ''
+        - '&7Hex gradient'
+        - '&#2ECC71#2ECC71 &8→ &#1A5C33#1A5C33'
+        - ''
+        - '&bClick to select'
+        - ''
+    candy_gradient:
+      slot: 22
+      material: PINK_DYE
+      type: gradient
+      hex-from: '#FF9FF3'
+      hex-to: '#A855F7'
+      name: '&#FF9FF3C&#F587F5a&#EC70F6n&#E358F7d&#A855F7y'
+      lore:
+        - ''
+        - '&7Hex gradient'
+        - '&#FF9FF3#FF9FF3 &8→ &#A855F7#A855F7'
+        - ''
+        - '&bClick to select'
+        - ''
+
+  navigation:
+    back:
+      slot: 49
+      material: ARROW
+      name: '&7Go Back'
+      lore: []
+    custom-hex:
+      slot: 46
+      material: BEACON
+      name: '&b&lCustom Hex Color'
+      lore:
+        - ''
+        - '&7Enter your own hex color'
+        - '&7directly in chat.'
+        - ''
+        - '&7Format: &f#RRGGBB'
+        - ''
+        - '&bClick to activate'
+        - ''
+    custom-gradient:
+      slot: 52
+      material: ENDER_EYE
+      name: '&5&lCustom Gradient'
+      lore:
+        - ''
+        - '&7Enter two hex colors'
+        - '&7to create your own gradient.'
+        - ''
+        - '&7Format: &f#RRGGBB'
+        - ''
+        - '&5Click to activate'
+        - ''
