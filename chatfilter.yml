@@ -1,1 +1,61 @@
+settings:
+  enabled: false
 
+# ── URL / IP filter ───────────────────────────────────────────────────────────
+url-filter:
+  enabled: true
+  # true  → blocks the entire message when a URL or IP is detected
+  # false → replaces the URL/IP inline with the 'replacement' text
+  block: true
+  replacement: '&c[URL blocked]'
+  # TLDs to consider as domains (without the dot).
+  # Any domain ending in one of these will be caught by the filter.
+  blocked-tlds:
+    - net
+    - com
+    - org
+    - io
+    - gg
+    - xyz
+    - me
+    - tv
+    - co
+    - info
+    - club
+    - online
+    - site
+    - store
+    - app
+    - dev
+    - es
+    - mx
+    - ar
+    - br
+    - uk
+    - de
+    - fr
+    - ru
+    - cn
+
+# ── Word filter ───────────────────────────────────────────────────────────────
+# Two supported formats:
+#
+# Simple format — the key is the word, the value is the replacement:
+#   words:
+#     bitch: '*****'
+#
+# Extended format — useful for words with special characters or dots:
+#   words:
+#     entry1:
+#       word: 'bitch'
+#       replacement: '*****'
+word-filter:
+  enabled: true
+  words:
+    bitch:
+      word: 'bitch'
+      replacement: '*****'
+    ass:
+      word: 'ass'
+      replacement: '***'
+    # Add more words here
