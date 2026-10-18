@@ -1,0 +1,116 @@
+settings:
+  enabled: true
+  # Seconds after a game ends before a random enabled game starts.
+  interval: 300
+  # Seconds to answer before the game expires.
+  timeout: 60
+  min-players: 2
+
+# Placeholders: start %timeout% | winner %player% %answer% %time% | expired %answer%
+# Rewards are console commands (%player% = winner).
+
+games:
+
+  # ── 1. First to type the word wins ──────────────────────────────────────────
+  word:
+    enabled: true
+    # Extra placeholder in start: %word%
+    words:
+      - 'LotusChat'
+      - 'Minecraft'
+      - 'Diamond'
+      - 'Creeper'
+      - 'Netherite'
+      - 'Enderman'
+      - 'Redstone'
+      - 'Obsidian'
+      - 'Beacon'
+      - 'Elytra'
+    messages:
+      start:
+        - ''
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <yellow>The first to type the word wins!'
+        - '<gray>Word: <white><bold>%word%'
+        - ''
+      winner:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <green>%player% <gray>typed <white>%answer% <gray>first in <white>%time%s<gray>!'
+      expired:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <red>Nobody typed the word in time.'
+    rewards:
+      - 'give %player% diamond 1'
+
+  # ── 2. Unscramble the word ──────────────────────────────────────────────────
+  unscramble:
+    enabled: true
+    # Extra placeholder in start: %scrambled%
+    words:
+      - 'diamond'
+      - 'creeper'
+      - 'skeleton'
+      - 'pickaxe'
+      - 'furnace'
+      - 'village'
+      - 'emerald'
+      - 'portal'
+      - 'zombie'
+      - 'dragon'
+    messages:
+      start:
+        - ''
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <yellow>Unscramble the word!'
+        - '<gray>Letters: <white><bold>%scrambled%'
+        - ''
+      winner:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <green>%player% <gray>unscrambled <white>%answer% <gray>in <white>%time%s<gray>!'
+      expired:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <red>Nobody got it. The word was <white>%answer%<red>.'
+    rewards:
+      - 'give %player% emerald 2'
+
+  # ── 3. Guess the number ─────────────────────────────────────────────────────
+  number:
+    enabled: true
+    min: 1
+    max: 100
+    # Extra placeholders in start: %min%, %max%
+    messages:
+      start:
+        - ''
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <yellow>I am thinking of a number!'
+        - '<gray>Guess it: between <white>%min% <gray>and <white>%max%<gray>.'
+        - ''
+      winner:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <green>%player% <gray>guessed the number <white>%answer% <gray>in <white>%time%s<gray>!'
+      expired:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <red>Nobody guessed it. The number was <white>%answer%<red>.'
+    rewards:
+      - 'give %player% gold_ingot 5'
+
+  # ── 4. Questions and answers ────────────────────────────────────────────────
+  trivia:
+    enabled: true
+    # Extra placeholder in start: %question%
+    # 'answers' accepts several valid answers (not case sensitive).
+    questions:
+      - question: 'How many blocks of obsidian are needed for the smallest Nether portal?'
+        answers: [ '10', 'ten' ]
+      - question: 'Which mob explodes when it gets close to you?'
+        answers: [ 'creeper' ]
+      - question: 'What item do you need to tame a wolf?'
+        answers: [ 'bone', 'bones' ]
+      - question: 'What is the name of the boss in The End?'
+        answers: [ 'ender dragon', 'enderdragon', 'the ender dragon' ]
+      - question: 'Which ore is used to make the strongest armor before Netherite?'
+        answers: [ 'diamond', 'diamonds' ]
+    messages:
+      start:
+        - ''
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <yellow>Trivia time!'
+        - '<white>%question%'
+        - ''
+      winner:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <green>%player% <gray>answered <white>%answer% <gray>correctly in <white>%time%s<gray>!'
+      expired:
+        - '<dark_gray>[<gold>ChatGames<dark_gray>] <red>Nobody answered. The answer was <white>%answer%<red>.'
+    rewards:
+      - 'give %player% experience_bottle 8'
