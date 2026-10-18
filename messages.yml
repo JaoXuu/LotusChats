@@ -1,63 +1,96 @@
-prefix: '&8[&bLotusChat&8] &r'
+
+prefix: '<dark_gray>[<aqua>LotusChat<dark_gray>] <reset>'
 
 general:
-  no-permission: '%prefix%&cYou do not have permission to do that.'
-  player-only: '%prefix%&cThis command can only be used by players.'
-  player-not-found: '%prefix%&cPlayer &f%player% &cwas not found or is offline.'
-  reload-success: '%prefix%&aPlugin reloaded successfully.'
-  cooldown: '%prefix%&cPlease wait &f%seconds%s &cbefore using that again.'
+  no-permission: '%prefix%<red>You do not have permission to do that.'
+  player-only: '%prefix%<red>This command can only be used by players.'
+  player-not-found: '%prefix%<red>Player <white>%player% <red>was not found or is offline.'
+  reload-success: '%prefix%<green>Plugin reloaded successfully.'
+  cooldown: '%prefix%<red>Please wait <white>%seconds%s <red>before using that again.'
 
 chatcolor:
-  color-set: '%prefix%&aChat color set to &r%color%&a.'
-  color-set-other: '%prefix%&aChat color of &f%player% &aset to &r%color%&a.'
-  color-cleared: '%prefix%&aChat color has been removed.'
-  no-hex-support: '%prefix%&cHex colors are only available on 1.16 and above.'
+  color-set: '%prefix%<green>Chat color set to <reset>%color%<green>.'
+  color-set-other: '%prefix%<green>Chat color of <white>%player% <green>set to <reset>%color%<green>.'
+  color-cleared: '%prefix%<green>Chat color has been removed.'
+  no-hex-support: '%prefix%<red>Hex colors are only available on 1.16 and above.'
 
   # ── Solid hex color input ─────────────────────────────────────────────────
-  hex-prompt: '&bType your hex color in chat &7(e.g. &f#FF5733&7 or &fFF5733&7). Type &ccancel &7to abort:'
-  hex-invalid: '&cInvalid hex color. Use the format &f#RRGGBB &cor &fRRGGBB&c. Try again or type &fcancel&c.'
-  hex-cancelled: '%prefix%&7Hex color selection cancelled.'
+  hex-prompt: '<aqua>Type your hex color in chat <gray>(e.g. <white>#FF5733<gray> or <white>FF5733<gray>). Type <red>cancel <gray>to abort:'
+  hex-invalid: '<red>Invalid hex color. Use the format <white>#RRGGBB <red>or <white>RRGGBB<red>. Try again or type <white>cancel<red>.'
+  hex-cancelled: '%prefix%<gray>Hex color selection cancelled.'
 
   # ── Hex gradient input ────────────────────────────────────────────────────
-  hex-gradient-prompt-1: '&bType the &lfirst &r&bhex color for the gradient &7(e.g. &f#54DAF4&7). Type &ccancel &7to abort:'
-  hex-gradient-prompt-2: '&bType the &lsecond &r&bhex color for the gradient &7(e.g. &f#545EB6&7). Type &ccancel &7to abort:'
-  hex-gradient-cancelled: '%prefix%&7Gradient color selection cancelled.'
+  hex-gradient-prompt-1: '<aqua>Type the <bold>first </bold>hex color for the gradient <gray>(e.g. <white>#54DAF4<gray>). Type <red>cancel <gray>to abort:'
+  hex-gradient-prompt-2: '<aqua>Type the <bold>second </bold>hex color for the gradient <gray>(e.g. <white>#545EB6<gray>). Type <red>cancel <gray>to abort:'
+  hex-gradient-cancelled: '%prefix%<gray>Gradient color selection cancelled.'
 
 messaging:
-  no-reply-target: '%prefix%&cYou have no one to reply to.'
-  player-toggled-off: '%prefix%&c%player% has private messages disabled.'
-  messages-toggled-on: '%prefix%&aPrivate messages enabled.'
-  messages-toggled-off: '%prefix%&cPrivate messages disabled.'
-  ignore-added: '%prefix%&aYou are now ignoring &f%player%&a.'
-  ignore-removed: '%prefix%&aYou are no longer ignoring &f%player%&a.'
-  player-ignoring-you: '%prefix%&c%player% is ignoring you.'
-  usage-msg: '%prefix%&cUsage: /msg <player> <message>'
-  usage-r: '%prefix%&cUsage: /r <message>'
-  usage-ignore: '%prefix%&cUsage: /msgignore <player>'
+  no-reply-target: '%prefix%<red>You have no one to reply to.'
+  player-toggled-off: '%prefix%<red>%player% has private messages disabled.'
+  messages-toggled-on: '%prefix%<green>Private messages enabled.'
+  messages-toggled-off: '%prefix%<red>Private messages disabled.'
+  ignore-added: '%prefix%<green>You are now ignoring <white>%player%<green>.'
+  ignore-removed: '%prefix%<green>You are no longer ignoring <white>%player%<green>.'
+  player-ignoring-you: '%prefix%<red>%player% is ignoring you.'
+  usage-msg: '%prefix%<red>Usage: /msg \<player> \<message>'
+  usage-r: '%prefix%<red>Usage: /r \<message>'
+  usage-ignore: '%prefix%<red>Usage: /msgignore \<player>'
+  socialspy-enabled: '%prefix%<gray>Social Spy <green>enabled<gray>. You will now see private messages.'
+  socialspy-disabled: '%prefix%<gray>Social Spy <red>disabled<gray>. You will no longer see private messages.'
 
 chatdisplay:
-  no-item: '%prefix%&cYou are not holding any item.'
-  inventory-expired: '%prefix%&cThis inventory preview has expired.'
-  enderchest-expired: '%prefix%&cThis ender chest preview has expired.'
-  item-expired: '%prefix%&cThis item preview has expired.'
-  multiple-triggers: '%prefix%&7Only one display trigger is allowed per message. The first one was processed.'
+  no-item: '%prefix%<red>You are not holding any item.'
+  inventory-expired: '%prefix%<red>This inventory preview has expired.'
+  enderchest-expired: '%prefix%<red>This ender chest preview has expired.'
+  item-expired: '%prefix%<red>This item preview has expired.'
+  itemmenu-expired: '%prefix%<red>This item preview has expired.'
+  multiple-triggers: '%prefix%<gray>Only one display trigger is allowed per message. The first one was processed.'
 
 chatchannel:
-  entered: '%prefix%&aYou joined the &f%channel% &achannel.'
-  left: '%prefix%&7You left the &f%channel% &7channel.'
+  entered: '%prefix%<green>You joined the <white>%channel% <green>channel.'
+  left: '%prefix%<gray>You left the <white>%channel% <gray>channel.'
 
 chatfilter:
-  blocked-url: '%prefix%&cSending links or IP addresses in chat is not allowed.'
+  blocked-url: '%prefix%<red>Sending links or IP addresses in chat is not allowed.'
+
+# /chat clear | /chat toggle — %player% = who used the command
+chat:
+  usage: '%prefix%<red>Usage: /chat \<clear|toggle>'
+  cleared: '%prefix%<gray>The chat has been cleared by <white>%player%<gray>.'
+  disabled: '%prefix%<red>The chat has been disabled by <white>%player%<red>.'
+  enabled: '%prefix%<green>The chat has been enabled by <white>%player%<green>.'
+  is-disabled: '%prefix%<red>The chat is currently disabled.'
+
+chat-control:
+  cooldown: '%prefix%<red>Please wait <white>%seconds%s <red>before chatting again.'
+
+tags:
+  selected: '%prefix%<green>Tag selected: <reset>%tag%'
+  removed: '%prefix%<gray>Your tag has been removed.'
+  locked: "%prefix%<red>You don't have this tag."
+  disabled: '%prefix%<red>Tags are disabled.'
+
+chatgames:
+  usage: '%prefix%<red>Usage: /lc chatgames start [word|unscramble|number|trivia] | stop'
+  already-running: '%prefix%<red>A chat game is already running.'
+  not-running: '%prefix%<red>There is no chat game running.'
+  start-failed: '%prefix%<red>Could not start a game. Check that it is enabled and has words/questions in chatgames.yml.'
 
 help:
-  header: '&8&m----&r &bLotusChat &8| &7Help &8&m----'
-  footer: '&8&m-----------------------------'
+  header: '<dark_gray><strikethrough>----</strikethrough> <aqua>LotusChat <dark_gray>| <gray>Help <dark_gray><strikethrough>----</strikethrough>'
+  footer: '<dark_gray><strikethrough>-----------------------------</strikethrough>'
   lines:
-    - '&b/lc reload &8- &7Reloads the plugin'
-    - '&b/lc help &8- &7Shows this help message'
-    - '&b/chatcolor &8- &7Opens the color selection menu'
-    - '&b/chatcolor set <player> <color> &8- &7Sets a player''s chat color'
-    - '&b/msg <player> <message> &8- &7Sends a private message'
-    - '&b/r <message> &8- &7Replies to the last private message'
-    - '&b/msgignore <player> &8- &7Toggle ignoring a player''s messages'
-    - '&b/msgtoggle &8- &7Toggle receiving private messages'
+    - '<aqua>/lc reload <dark_gray>- <gray>Reloads the plugin'
+    - '<aqua>/lc help <dark_gray>- <gray>Shows this help message'
+    - '<aqua>/chatcolor <dark_gray>- <gray>Opens the color selection menu'
+    - "<aqua>/chatcolor set \\<player> \\<color> <dark_gray>- <gray>Sets a player's chat color"
+    - '<aqua>/msg \<player> \<message> <dark_gray>- <gray>Sends a private message'
+    - '<aqua>/r \<message> <dark_gray>- <gray>Replies to the last private message'
+    - "<aqua>/msgignore \\<player> <dark_gray>- <gray>Toggle ignoring a player's messages"
+    - '<aqua>/msgtoggle <dark_gray>- <gray>Toggle receiving private messages'
+    - '<aqua>/socialspy <dark_gray>- <gray>Allow monitoring of private messages'
+    - '<aqua>/tags <dark_gray>- <gray>Opens the tag selection menu'
+    - '<aqua>/chat clear <dark_gray>- <gray>Clears the chat for everyone'
+    - '<aqua>/chat toggle <dark_gray>- <gray>Enables or disables the chat'
+    - '<aqua>/lc chatgames start [game] <dark_gray>- <gray>Starts a chat game now'
+    - '<aqua>/lc chatgames stop <dark_gray>- <gray>Stops the running chat game'
