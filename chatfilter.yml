@@ -7,7 +7,12 @@ url-filter:
   # true  → blocks the entire message when a URL or IP is detected
   # false → replaces the URL/IP inline with the 'replacement' text
   block: true
-  replacement: '&c[URL blocked]'
+  replacement: '<red>[URL blocked]'
+  # Links / IPs always allowed. A domain also allows its subdomains;
+  # an entry with a path only allows links starting with it.
+  ip-url-allowed:
+    - 'myserver.net'
+    - 'discord.gg/myserver'
   # TLDs to consider as domains (without the dot).
   # Any domain ending in one of these will be caught by the filter.
   blocked-tlds:
