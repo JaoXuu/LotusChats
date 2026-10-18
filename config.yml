@@ -13,11 +13,11 @@ messaging:
   enabled: true
   format:
     # %receiver% = recipient's name, %message% = message content
-    sender: '&8[&7You &8→ &7%receiver%&8] &f%message%'
+    sender: '<dark_gray>[<gray>You <dark_gray>→ <gray>%receiver%<dark_gray>] <white>%message%'
     # %sender% = sender's name
-    receiver: '&8[&7%sender% &8→ &7You&8] &f%message%'
+    receiver: '<dark_gray>[<gray>%sender% <dark_gray>→ <gray>You<dark_gray>] <white>%message%'
     # Shown to players with lotuschat.spy permission
-    spy: '&8[SPY] &7%sender% &8→ &7%receiver%&8: &f%message%'
+    spy: '<dark_gray>[SPY] <gray>%sender% <dark_gray>→ <gray>%receiver%<dark_gray>: <white>%message%'
   sound:
     enabled: true
     name: ENTITY_EXPERIENCE_ORB_PICKUP
@@ -28,18 +28,18 @@ messaging:
 
 mentions:
   enabled: true
-  # Color applied to the @PlayerName mention in chat
-  highlight-color: '&e'
+  # Color applied to the @PlayerName mention in chat (soporta MiniMessage)
+  highlight-color: '<yellow>'
 
   chat:
     enabled: true
     # %sender% = player who mentioned, %target% = player who was mentioned
-    message: '&e%sender% mentioned you in chat.'
+    message: '<yellow>%sender% mentioned you in chat.'
 
   title:
     enabled: false
-    title: '&e⚡ Mention!'
-    subtitle: '&7%sender% mentioned you'
+    title: '<yellow>⚡ Mention!'
+    subtitle: '<gray>%sender% mentioned you'
     fade-in: 10
     stay: 70
     fade-out: 20
@@ -49,3 +49,35 @@ mentions:
     name: ENTITY_EXPERIENCE_ORB_PICKUP
     volume: 1.0
     pitch: 1.0
+# ── ChatControl ──────────────────────────────────────────────────────────────
+# Applies to normal chat, chat channels and chat game answers.
+# Players with lotuschat.chatcontrol.bypass skip all of it.
+chat-control:
+  enabled: true
+  # Seconds a player has to wait between messages (decimals allowed, e.g. 1.5). 0 = disabled.
+  cooldown: 2
+  # Max times the same word may be repeated in a row:
+  # 'hi hi hi hi' → 'hi hi' (with 2).
+  repeated-words:
+    enabled: true
+    max: 2
+  # Messages written mostly in CAPITALS are turned into lowercase.
+  anti-caps:
+    enabled: true
+    # Only messages with at least this many letters are checked (so 'OK' or 'GG' are fine).
+    min-length: 6
+    # Lowercase the message when more than this % of its letters are capitals.
+    max-percent: 50
+  # Limits how many times the same character can repeat in a row:
+  # 'hellooooo' → 'hellooo' (with 3). Numbers (1000000) and color codes are not touched.
+  anti-flood:
+    enabled: true
+    max-repeat: 3
+  # Empty lines sent by /chat clear.
+  clear-lines: 100
+
+# ── DiscordSRV ───────────────────────────────────────────────────────────────
+# Sends the normal chat (already filtered) to Discord. Chat channels are never sent.
+# Requires RespectChatPlugins: true in DiscordSRV's config.yml.
+discordsrv:
+  enabled: true
