@@ -1,0 +1,184 @@
+settings:
+  enabled: true
+  # How %lotuschat_tag% is rendered in chatformat.yml / chatchannel.yml when the
+  # player has a tag selected (%tag% = the tag). Players with no tag get an empty string.
+  placeholder-format: '%tag% '
+
+# The /tags menu.
+menu:
+  title: '<dark_gray>» <gold>Tags <dark_gray>«'
+  # Multiple of 9, max 54.
+  size: 45
+  # Item used for every tag unless the tag sets its own 'material'.
+  material: NAME_TAG
+  # %status% placeholder available in each tag's lore.
+  status:
+    selected: '<green>✔ Selected'
+    available: '<yellow>➜ Click to select'
+    locked: '<red>✘ Locked'
+  navigation:
+    remove-tag:
+      slot: 39
+      material: BARRIER
+      name: '<red>Remove tag'
+      lore:
+        - '<gray>Click to stop using your tag.'
+    close:
+      slot: 41
+      material: ARROW
+      name: '<gray>Close'
+      lore: []
+
+# Each tag:
+#   name:       item name shown in the menu
+#   lore:       item lore (%tag% = the tag preview, %status% = selected / available / locked)
+#   slot:       slot in the menu
+#   permission: permission required to use it ('' = everyone)
+#   tag:        the text shown in chat through %lotuschat_tag%
+#   material:   (optional) item for this tag, overrides menu.material
+#
+# The default symbols are part of the basic Unicode range, so they load and render
+# on every version (1.8 → latest). Avoid emojis (crown, fire, etc.) if you run 1.8-1.12:
+# the YAML parser of those versions can't read them (not even inside a comment) and
+# the whole file fails to load.
+tags:
+  star:
+    name: '<yellow>★ Star'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 10
+    permission: 'lotuschat.tags.star'
+    tag: '<dark_gray>[<yellow>★<dark_gray>]'
+  crown:
+    name: '<gold>♛ King'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 11
+    permission: 'lotuschat.tags.crown'
+    tag: '<dark_gray>[<gold>♛<dark_gray>]'
+  heart:
+    name: '<red>❤ Lover'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 12
+    permission: 'lotuschat.tags.heart'
+    tag: '<dark_gray>[<red>❤<dark_gray>]'
+  warrior:
+    name: '<red>⚔ Warrior'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 13
+    permission: 'lotuschat.tags.warrior'
+    tag: '<dark_gray>[<red>⚔<dark_gray>]'
+  skull:
+    name: '<gray>☠ Reaper'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 14
+    permission: 'lotuschat.tags.skull'
+    tag: '<dark_gray>[<white>☠<dark_gray>]'
+  flower:
+    name: '<light_purple>✿ Flower'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 15
+    permission: 'lotuschat.tags.flower'
+    tag: '<dark_gray>[<light_purple>✿<dark_gray>]'
+  snow:
+    name: '<aqua>❄ Frost'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 16
+    permission: 'lotuschat.tags.snow'
+    tag: '<dark_gray>[<aqua>❄<dark_gray>]'
+  lightning:
+    name: '<yellow>⚡ Thunder'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 19
+    permission: 'lotuschat.tags.lightning'
+    tag: '<dark_gray>[<yellow>⚡<dark_gray>]'
+  sun:
+    name: '<gold>☀ Sunny'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 20
+    permission: 'lotuschat.tags.sun'
+    tag: '<dark_gray>[<gold>☀<dark_gray>]'
+  music:
+    name: '<green>♫ Musician'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 21
+    permission: 'lotuschat.tags.music'
+    tag: '<dark_gray>[<green>♫<dark_gray>]'
+  peace:
+    name: '<white>☮ Peace'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 22
+    permission: 'lotuschat.tags.peace'
+    tag: '<dark_gray>[<white>☮<dark_gray>]'
+  yinyang:
+    name: '<gray>☯ Balance'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 23
+    permission: 'lotuschat.tags.yinyang'
+    tag: '<dark_gray>[<white>☯<dark_gray>]'
+  smile:
+    name: '<yellow>☺ Happy'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 24
+    permission: 'lotuschat.tags.smile'
+    tag: '<dark_gray>[<yellow>☺<dark_gray>]'
+  pro:
+    name: '<aqua>✦ PRO'
+    lore:
+      - ''
+      - '<gray>Preview: %tag%'
+      - ''
+      - '%status%'
+    slot: 25
+    permission: 'lotuschat.tags.pro'
+    tag: '<gradient:#00C6FF:#0072FF><bold>PRO</bold></gradient>'
