@@ -2,14 +2,13 @@ settings:
   enabled: true
 
 # ── Item display: shows the held item with its native hover tooltip ────────────
-# Note: native hover may not render correctly on 1.20.5+. Use item-menu-display instead.
 item-display:
   enabled: true
   triggers:
     - '[i]'
   cooldown: 30
-  format: '&7[&f%item%&7%amount%]'
-  amount-format: ' &7x&f%amount%'
+  format: '<gray>[<white>%item%<gray>%amount%]'
+  amount-format: ' <gray>x<white>%amount%'
   permission: 'lotuschat.display.item'
 
 # ── Item menu display: shows a clickable chat link that opens an item preview menu ──
@@ -19,13 +18,13 @@ item-menu-display:
     - '[item]'
   cooldown: 30
   expire-seconds: 300
-  format: '&7[&f%item%&7]'
+  format: '<gray>[<white>%item%<gray>]'
   hover:
-    - '&7Click to view'
-    - '&f%player%&7''s item'
+    - '<gray>Click to view'
+    - "<white>%player%<gray>'s item"
   permission: 'lotuschat.display.itemmenu'
   menu:
-    title: '&8%player%&7''s Item'
+    title: "<dark_gray>%player%<gray>'s Item"
     filler:
       material: 'GRAY_STAINED_GLASS_PANE'
       name: ' '
@@ -38,13 +37,13 @@ inventory-display:
     - '[inventory]'
   cooldown: 30
   expire-seconds: 300
-  format: '&a[&f%player%&a''s Inventory]'
+  format: "<green>[<white>%player%<green>'s Inventory]"
   hover:
-    - '&7Click to view'
-    - '&f%player%&7''s inventory'
+    - '<gray>Click to view'
+    - "<white>%player%<gray>'s inventory"
   permission: 'lotuschat.display.inventory'
   menu:
-    title: '&8%player%&7''s Inventory'
+    title: "<dark_gray>%player%<gray>'s Inventory"
     filler:
       material: 'GRAY_STAINED_GLASS_PANE'
       name: ' '
@@ -57,13 +56,13 @@ enderchest-display:
     - '[enderchest]'
   cooldown: 30
   expire-seconds: 300
-  format: '&5[&f%player%&5''s Ender Chest]'
+  format: "<dark_purple>[<white>%player%<dark_purple>'s Ender Chest]"
   hover:
-    - '&7Click to view'
-    - '&f%player%&7''s ender chest'
+    - '<gray>Click to view'
+    - "<white>%player%<gray>'s ender chest"
   permission: 'lotuschat.display.enderchest'
   menu:
-    title: '&8%player%&7''s Ender Chest'
+    title: "<dark_gray>%player%<gray>'s Ender Chest"
 
 # ── Custom displays: define your own triggers with hover text and PlaceholderAPI support ──
 custom-displays:
@@ -72,16 +71,16 @@ custom-displays:
     triggers:
       - '[stats]'
     cooldown: 20
-    format: '&c[&f%player%&c''s Stats]'
+    format: "<red>[<white>%player%<red>'s Stats]"
     hover:
       - ''
-      - '&7➛ &c%player%'
+      - '<gray>➛ <red>%player%'
       - ''
-      - '&8▪ &7Kills: &c%statistic_player_kills%'
-      - '&8▪ &7Deaths: &c%statistic_deaths%'
-      - '&8▪ &7Level: &a%player_level%'
-      - '&8▪ &7XP: &a%player_exp%'
-      - '&8▪ &7Health: &a%player_health%&8/&a%player_max_health%'
+      - '<dark_gray>▪ <gray>Kills: <red>%statistic_player_kills%'
+      - '<dark_gray>▪ <gray>Deaths: <red>%statistic_deaths%'
+      - '<dark_gray>▪ <gray>Level: <green>%player_level%'
+      - '<dark_gray>▪ <gray>XP: <green>%player_exp%'
+      - '<dark_gray>▪ <gray>Health: <green>%player_health%<dark_gray>/<green>%player_max_health%'
       - ''
     permission: 'lotuschat.display.stats'
 
@@ -90,10 +89,10 @@ custom-displays:
     triggers:
       - '[ping]'
     cooldown: 10
-    format: '&b[&f%player%&b''s Ping]'
+    format: "<aqua>[<white>%player%<aqua>'s Ping]"
     hover:
       - ''
-      - '&f%player%&7''s ping'
-      - '&7is &b%player_ping%ms'
+      - "<white>%player%<gray>'s ping"
+      - '<gray>is <aqua>%player_ping%ms'
       - ''
     permission: 'lotuschat.display.ping'
